@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.chachao.mall</groupId>
-    <artifactId>ware</artifactId>
+    <artifactId>mall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mall</name>
     <description>聚合服务</description>
