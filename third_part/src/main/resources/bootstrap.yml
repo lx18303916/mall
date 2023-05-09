@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: third-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: ee586973-97e9-42f9-b4c9-953d28c37e56
+
+    alicloud:
+      access-key: LTAI5tKbGfKrHgLs82utzMyk
+      secret-key: TN1nbuk7QvELsqvVrlTk4oPaOhdRcY
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+        bucket: chachao-mall
