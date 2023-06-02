@@ -14,13 +14,7 @@ import org.hibernate.validator.constraints.URL;
 
 import javax.validation.constraints.*;
 
-/**
- * 品牌
- * 
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-10-01 21:08:49
- */
+
 @Data
 @TableName("pms_brand")
 public class BrandEntity implements Serializable {

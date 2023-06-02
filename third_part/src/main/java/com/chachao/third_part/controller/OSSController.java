@@ -6,6 +6,7 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.common.utils.BinaryUtil;
 import com.aliyun.oss.model.MatchMode;
 import com.aliyun.oss.model.PolicyConditions;
+import com.chachao.common.utils.R;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,7 +32,7 @@ public class OSSController {
     String accessKey;
 
     @RequestMapping("/oss/getkey")
-    public Map<String,String> getKey() {
+    public R getKey() {
         // 阿里云账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。
 
         // 填写Host地址，格式为https://bucketname.endpoint。
@@ -72,6 +73,7 @@ public class OSSController {
         } finally {
             ossClient.shutdown();
         }
-        return respMap;
+
+        return R.ok().put("data", respMap);
     }
 }

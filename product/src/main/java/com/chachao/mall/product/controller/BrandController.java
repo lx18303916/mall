@@ -19,6 +19,8 @@ import com.chachao.mall.product.service.BrandService;
 import com.chachao.common.utils.PageUtils;
 import com.chachao.common.utils.R;
 
+import javax.validation.Valid;
+
 
 /**
  * 品牌
@@ -61,8 +63,8 @@ public class BrandController {
      */
     @RequestMapping("/save")
     //@RequiresPermissions("product:brand:save")
-//    public R save(@Validated({AddGroup.class}) @RequestBody BrandEntity brand/*,BindingResult result*/){
-    public R save( @RequestBody BrandEntity brand/*,BindingResult result*/){
+    public R save(@Validated({AddGroup.class}) @RequestBody BrandEntity brand/*,BindingResult result*/){
+//    public R save(@Valid @RequestBody BrandEntity brand/*,BindingResult result*/){
 //        if(result.hasErrors()){
 //            Map<String,String> map = new HashMap<>();
 //            //1、获取校验的错误结果

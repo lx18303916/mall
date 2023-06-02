@@ -17,9 +17,8 @@ import java.util.Map;
 @Slf4j
 //@ResponseBody
 //@ControllerAdvice(basePackages = "com.atguigu.gulimall.product.controller")
-@RestControllerAdvice(basePackages = "com.atguigu.gulimall.product.controller")
+@RestControllerAdvice(basePackages = "com.chachao.mall.product.controller")
 public class GulimallExceptionControllerAdvice {
-
 
     @ExceptionHandler(value= MethodArgumentNotValidException.class)
     public R handleVaildException(MethodArgumentNotValidException e){
@@ -30,6 +29,7 @@ public class GulimallExceptionControllerAdvice {
         bindingResult.getFieldErrors().forEach((fieldError)->{
             errorMap.put(fieldError.getField(),fieldError.getDefaultMessage());
         });
+//        errorMap.put("xxx", "xxx");
         return R.error(BizCodeEnume.VAILD_EXCEPTION.getCode(),BizCodeEnume.VAILD_EXCEPTION.getMsg()).put("data",errorMap);
     }
 
